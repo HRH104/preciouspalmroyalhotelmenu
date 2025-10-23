@@ -1,0 +1,2687 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precious Palm Royal Hotel Menu</title>
+    <link rel="icon" type="image/png" href="/assets/pprh_logo-BMXCkUBU.png">
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;family=Cormorant+Garamond:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-gold: #D4AF37;
+            --light-gold: #F4E4A6;
+            --dark-gold: #B8941F;
+            --deep-black: #0A0A0A;
+            --charcoal: #1A1A1A;
+            --soft-white: #FAFAFA;
+            --pearl: #F8F8F8;
+            --shadow-gold: rgba(212, 175, 55, 0.15);
+            --shadow-dark: rgba(0, 0, 0, 0.25);
+        }
+
+        /* Ultra-Premium Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--deep-black) 0%, var(--charcoal) 50%, var(--deep-black) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(1.1);
+        }
+        
+        .luxury-logo {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--light-gold) 50%, var(--primary-gold) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            margin-bottom: 40px;
+            animation: luxuryFloat 3s ease-in-out infinite;
+            box-shadow: 
+                0 0 60px var(--shadow-gold),
+                0 20px 40px var(--shadow-dark),
+                inset 0 2px 4px rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+        .luxury-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+        }
+        
+        .luxury-logo::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            background: linear-gradient(45deg, var(--primary-gold), transparent, var(--primary-gold));
+            border-radius: 50%;
+            z-index: -1;
+            animation: rotate 4s linear infinite;
+        }
+        
+        @keyframes luxuryFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+            33% { transform: translateY(-15px) rotate(2deg) scale(1.05); }
+            66% { transform: translateY(-8px) rotate(-1deg) scale(1.02); }
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .luxury-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--light-gold) 50%, var(--primary-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+            animation: textGlow 2s ease-in-out infinite alternate;
+            letter-spacing: 2px;
+        }
+        
+        @keyframes textGlow {
+            0% { filter: drop-shadow(0 0 10px var(--shadow-gold)); }
+            100% { filter: drop-shadow(0 0 20px var(--shadow-gold)); }
+        }
+        
+        .luxury-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 50px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+        
+        .diamond-spinner {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .diamond {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-gold);
+            transform: rotate(45deg);
+            animation: diamondSpin 2s ease-in-out infinite;
+        }
+        
+        .diamond:nth-child(1) { top: 0; left: 30px; animation-delay: 0s; }
+        .diamond:nth-child(2) { top: 30px; right: 0; animation-delay: 0.2s; }
+        .diamond:nth-child(3) { bottom: 0; left: 30px; animation-delay: 0.4s; }
+        .diamond:nth-child(4) { top: 30px; left: 0; animation-delay: 0.6s; }
+        
+        @keyframes diamondSpin {
+            0%, 100% { transform: rotate(45deg) scale(1); opacity: 1; }
+            50% { transform: rotate(225deg) scale(1.5); opacity: 0.7; }
+        }
+        
+        .luxury-progress {
+            width: 300px;
+            height: 3px;
+            background: rgba(212, 175, 55, 0.2);
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .luxury-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-gold), var(--light-gold), var(--primary-gold));
+            border-radius: 2px;
+            animation: luxuryProgress 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            position: relative;
+        }
+        
+        .luxury-progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: shimmer 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes luxuryProgress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        /* Main Design System */
+        .main-container {
+            background: linear-gradient(135deg, var(--deep-black) 0%, var(--charcoal) 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        .main-container::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 20%, var(--shadow-gold) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, var(--shadow-gold) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+    /* Custom scrollbar styled to brand gold */
+    ::-webkit-scrollbar { width: 12px; }
+    ::-webkit-scrollbar-track { background: rgba(255,255,255,0.02); }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--primary-gold), var(--dark-gold)); border-radius: 10px; border: 3px solid transparent; background-clip: padding-box; }
+    ::-webkit-scrollbar-thumb:hover { filter: brightness(0.95); }
+    /* Firefox */
+    * { scrollbar-width: thin; scrollbar-color: var(--primary-gold) transparent; }
+        
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Premium Header */
+        .premium-header {
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(26, 26, 26, 0.95) 100%);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .premium-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+        }
+        
+        .premium-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+        }
+        
+        .logo-container {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .premium-logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--light-gold) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            box-shadow: 
+                0 0 40px var(--shadow-gold),
+                0 10px 30px var(--shadow-dark);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        .premium-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+        }
+        
+        .premium-logo:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 
+                0 0 60px var(--shadow-gold),
+                0 15px 40px var(--shadow-dark);
+        }
+        
+        .restaurant-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--light-gold) 50%, var(--primary-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            line-height: 1.2;
+        }
+        
+        .restaurant-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        
+        .welcome-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Ultra-Premium Menu Cards */
+        .menu-section {
+            margin-bottom: 80px;
+        }
+        
+        .menu-card {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(10, 10, 10, 0.9) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 24px;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .menu-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--shadow-gold) 0%, transparent 50%, var(--shadow-gold) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+        
+        .menu-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 
+                0 25px 50px var(--shadow-dark),
+                0 0 40px var(--shadow-gold);
+        }
+        
+        .menu-card:hover::before {
+            opacity: 0.03;
+        }
+        
+        .menu-card > * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .category-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--light-gold) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin-right: 25px;
+            box-shadow: 0 10px 25px var(--shadow-gold);
+            position: relative;
+        }
+        
+        .category-icon::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--primary-gold), transparent, var(--primary-gold));
+            border-radius: 22px;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        
+        .category-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--light-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 1px;
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        
+        .menu-item {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 25px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .menu-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .menu-item:hover {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(212, 175, 55, 0.02) 100%);
+            border-color: rgba(212, 175, 55, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .menu-item:hover::before {
+            left: 100%;
+        }
+        
+        .item-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .item-info h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--soft-white);
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+        
+        .item-info p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.4;
+            font-weight: 300;
+        }
+        
+        .price-badge {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--light-gold) 100%);
+            color: var(--deep-black);
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            box-shadow: 0 4px 15px var(--shadow-gold);
+            position: relative;
+        }
+        
+        .price-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+            border-radius: 25px;
+        }
+
+        /* Floating Navigation */
+        .floating-nav {
+            position: fixed;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            z-index: 1000;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(26, 26, 26, 0.9) 100%);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 20px 12px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 10px 30px var(--shadow-dark);
+        }
+        
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            margin: 12px 0;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        
+        .nav-dot::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-dot.active {
+            background: var(--primary-gold);
+            transform: scale(1.3);
+            box-shadow: 0 0 15px var(--shadow-gold);
+        }
+        
+        .nav-dot.active::before {
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        /* Floating Action Buttons */
+        .floating-actions {
+            position: fixed;
+            bottom: 30px;
+            z-index: 1000;
+        }
+        
+        .call-button {
+            left: 30px;
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--light-gold) 100%);
+            color: var(--deep-black);
+            border-radius: 50px;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 25px var(--shadow-gold);
+            border: 2px solid transparent;
+        }
+        
+        .call-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 35px var(--shadow-gold);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .scroll-top {
+            right: 30px;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(26, 26, 26, 0.9) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: var(--primary-gold);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+        
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .scroll-top:hover {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--light-gold) 100%);
+            color: var(--deep-black);
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 10px 25px var(--shadow-gold);
+        }
+
+        /* Premium Footer */
+        .premium-footer {
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(26, 26, 26, 0.95) 100%);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            margin-top: 100px;
+        }
+        
+        .premium-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        
+        .footer-message {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--primary-gold);
+            margin-bottom: 30px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        
+        .footer-features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Inter', sans-serif;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .floating-nav { display: none; }
+            .menu-grid { grid-template-columns: 1fr; }
+            .menu-card { padding: 30px 20px; }
+            .category-header { flex-direction: column; text-align: center; }
+            .category-icon { margin-right: 0; margin-bottom: 15px; }
+            .footer-features { flex-direction: column; gap: 20px; }
+            .item-content { flex-direction: column; gap: 15px; }
+            .price-badge { align-self: flex-start; }
+        }
+        
+        @media (max-width: 480px) {
+            .menu-grid { grid-template-columns: 1fr; gap: 15px; }
+            .menu-item { padding: 20px; }
+            .premium-header { padding: 40px 0; }
+            .menu-card { padding: 25px 15px; }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+   <script type="module" crossorigin src="/assets/index-Cd15lf07.js"></script>
+ </head>
+ <body class="main-container"><!-- Ultra-Premium Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="luxury-logo">
+     <img src="/assets/pprh_logo-BMXCkUBU.png" alt="PPRH logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" onerror="this.style.display='none'">
+    </div>
+   <div class="luxury-text">
+    Precious Palm
+   </div>
+   <div class="luxury-subtitle">
+    Royal Experience
+   </div>
+   <div class="diamond-spinner">
+    <div class="diamond"></div>
+    <div class="diamond"></div>
+    <div class="diamond"></div>
+    <div class="diamond"></div>
+   </div>
+   <div class="luxury-progress">
+    <div class="luxury-progress-fill"></div>
+   </div>
+  </div>
+  <div class="content-wrapper"><!-- Premium Header -->
+   <header class="premium-header">
+    <div class="logo-container">
+                 <div class="premium-logo">
+                     <img src="/assets/pprh_logo-BMXCkUBU.png" alt="PPRH logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" onerror="this.style.display='none'">
+                 </div>
+    </div>
+    <h1 id="restaurant-name" class="restaurant-title">Precious Palm Royal Hotel</h1>
+    <p id="tagline" class="restaurant-tagline">Restaurant &amp; Papaya Kernel Bar</p>
+    <p id="welcome-message" class="welcome-text">Experience culinary excellence with our carefully curated selection of traditional Nigerian cuisine, continental dishes, and premium beverages</p>
+   </header><!-- Main Menu Content -->
+    <div id="react-root" class="max-w-7xl mx-auto px-6 py-20"></div><!-- React will render the menu here -->
+         <div class="item-info">
+          <h3>Lipton Tea</h3>
+          <p>Classic tea blend, served hot</p>
+         </div>
+         <div class="price-badge">
+          ₦1,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Milk</h3>
+          <p>Fresh dairy milk, served chilled</p>
+         </div>
+         <div class="price-badge">
+          ₦2,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Oats</h3>
+          <p>Nutritious oatmeal with fresh fruits and honey</p>
+         </div>
+         <div class="price-badge">
+          ₦2,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Omelet</h3>
+          <p>Classic technique omelet with choice of premium fillings</p>
+         </div>
+         <div class="price-badge">
+          ₦2,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Pancake</h3>
+          <p>Stack of fluffy pancakes with maple syrup and butter</p>
+         </div>
+         <div class="price-badge">
+          ₦3,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Scrambled Egg</h3>
+          <p>Farm-fresh eggs cooked to creamy perfection with herbs</p>
+         </div>
+         <div class="price-badge">
+          ₦3,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Toast Bread</h3>
+          <p>Golden toasted artisan bread with premium spreads</p>
+         </div>
+         <div class="price-badge">
+          ₦1,500
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Main Courses -->
+    <section id="mains" class="menu-section">
+     <div class="menu-card">
+      <div class="category-header">
+       <div class="category-icon">
+        🍚
+       </div>
+       <h2 class="category-title">Signature Main Courses</h2>
+      </div>
+      <div class="menu-grid">
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Amala</h3>
+          <p>Traditional yam flour swallow, smooth and rich</p>
+         </div>
+         <div class="price-badge">
+          ₦4,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Boiled Potatoes</h3>
+          <p>Fresh potatoes boiled to perfection</p>
+         </div>
+         <div class="price-badge">
+          ₦3,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Chinese Rice</h3>
+          <p>Wok-fried rice with premium ingredients and traditional spices</p>
+         </div>
+         <div class="price-badge">
+          ₦8,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Coconut Rice</h3>
+          <p>Fragrant jasmine rice cooked in rich coconut milk</p>
+         </div>
+         <div class="price-badge">
+          ₦4,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Eba</h3>
+          <p>Traditional cassava flour swallow, perfectly prepared</p>
+         </div>
+         <div class="price-badge">
+          ₦4,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Jollof Rice</h3>
+          <p>Nigeria's crown jewel - perfectly spiced and aromatic</p>
+         </div>
+         <div class="price-badge">
+          ₦4,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Macaroni</h3>
+          <p>Classic pasta with rich sauce and seasonings</p>
+         </div>
+         <div class="price-badge">
+          ₦4,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Mashed Potatoes</h3>
+          <p>Creamy mashed potatoes with butter and herbs</p>
+         </div>
+         <div class="price-badge">
+          ₦4,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Poundo Yam</h3>
+          <p>Smooth yam flour swallow, expertly prepared</p>
+         </div>
+         <div class="price-badge">
+          ₦4,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Semovita</h3>
+          <p>Premium semolina swallow, light and fluffy</p>
+         </div>
+         <div class="price-badge">
+          ₦4,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Spaghetti</h3>
+          <p>Al dente pasta with rich marinara and fresh herbs</p>
+         </div>
+         <div class="price-badge">
+          ₦4,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Wheat</h3>
+          <p>Nutritious wheat swallow, perfectly textured</p>
+         </div>
+         <div class="price-badge">
+          ₦4,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>White Rice</h3>
+          <p>Premium long-grain white rice, perfectly steamed</p>
+         </div>
+         <div class="price-badge">
+          ₦4,500
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Premium Proteins -->
+    <section id="proteins" class="menu-section">
+     <div class="menu-card">
+      <div class="category-header">
+       <div class="category-icon">
+        🥩
+       </div>
+       <h2 class="category-title">Premium Proteins</h2>
+      </div>
+      <div class="menu-grid">
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Beef</h3>
+          <p>Tender beef cuts with signature marinade and spices</p>
+         </div>
+         <div class="price-badge">
+          ₦8,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Catfish</h3>
+          <p>Locally sourced catfish, grilled or fried to perfection</p>
+         </div>
+         <div class="price-badge">
+          ₦8,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Chicken</h3>
+          <p>Organic chicken prepared with traditional Nigerian spices</p>
+         </div>
+         <div class="price-badge">
+          ₦7,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Chicken Wing</h3>
+          <p>Juicy chicken wings with special seasoning</p>
+         </div>
+         <div class="price-badge">
+          ₦6,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Cow Head</h3>
+          <p>Traditional cow head delicacy, expertly prepared</p>
+         </div>
+         <div class="price-badge">
+          ₦8,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Cow Tail</h3>
+          <p>Tender cow tail with rich flavors and spices</p>
+         </div>
+         <div class="price-badge">
+          ₦7,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Dry Fish</h3>
+          <p>Premium dried fish with authentic smoky flavor</p>
+         </div>
+         <div class="price-badge">
+          ₦7,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Goat Meat</h3>
+          <p>Slow-cooked goat meat with authentic local seasonings</p>
+         </div>
+         <div class="price-badge">
+          ₦7,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Meluzer</h3>
+          <p>Premium fish selection with special preparation</p>
+         </div>
+         <div class="price-badge">
+          ₦8,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Scumbia Fish</h3>
+          <p>Premium fish fillet with lemon butter and fresh herbs</p>
+         </div>
+         <div class="price-badge">
+          ₦8,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Turkey</h3>
+          <p>Succulent turkey breast with herb crust and natural jus</p>
+         </div>
+         <div class="price-badge">
+          ₦9,000
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Traditional Soups -->
+    <section id="soups" class="menu-section">
+     <div class="menu-card">
+      <div class="category-header">
+       <div class="category-icon">
+        🍲
+       </div>
+       <h2 class="category-title">Traditional Soups</h2>
+      </div>
+      <div class="menu-grid">
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Afang Soup</h3>
+          <p>Nutritious vegetable soup from Cross River State</p>
+         </div>
+         <div class="price-badge">
+          Market Price
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Banga Soup</h3>
+          <p>Traditional palm nut soup with rich flavors</p>
+         </div>
+         <div class="price-badge">
+          Market Price
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Black Soup</h3>
+          <p>Traditional dark soup with unique spices</p>
+         </div>
+         <div class="price-badge">
+          Market Price
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Egwusi Soup</h3>
+          <p>Classic melon seed soup with assorted meat and fish</p>
+         </div>
+         <div class="price-badge">
+          Market Price
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Ogbono Soup</h3>
+          <p>Traditional draw soup with ogbono seeds</p>
+         </div>
+         <div class="price-badge">
+          Market Price
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Oha Soup</h3>
+          <p>Traditional Igbo soup with oha leaves</p>
+         </div>
+         <div class="price-badge">
+          Market Price
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Gram of Onion Soup</h3>
+          <p>Rich onion-based soup with premium ingredients</p>
+         </div>
+         <div class="price-badge">
+          ₦3,300
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Gram of Vegetable Soup</h3>
+          <p>Fresh vegetable soup with seasonal greens</p>
+         </div>
+         <div class="price-badge">
+          ₦2,200
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Vegetable Soup</h3>
+          <p>Seasonal vegetables in rich, flavorful broth</p>
+         </div>
+         <div class="price-badge">
+          Market Price
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Catfish Pepper Soup</h3>
+          <p>Fresh catfish in spicy pepper broth with local herbs</p>
+         </div>
+         <div class="price-badge">
+          ₦8,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Chicken Pepper Soup</h3>
+          <p>Tender chicken pieces in traditional pepper soup base</p>
+         </div>
+         <div class="price-badge">
+          ₦8,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Gram of Mushroom Soup</h3>
+          <p>Rich mushroom soup with earthy flavors</p>
+         </div>
+         <div class="price-badge">
+          ₦2,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Croaker Pepper Soup</h3>
+          <p>Fresh croaker fish in traditional pepper soup</p>
+         </div>
+         <div class="price-badge">
+          ₦8,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Goat Meat Pepper Soup</h3>
+          <p>Tender goat meat in spicy pepper broth</p>
+         </div>
+         <div class="price-badge">
+          ₦8,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Turkey Pepper Soup</h3>
+          <p>Aromatic turkey soup with traditional pepper spices</p>
+         </div>
+         <div class="price-badge">
+          ₦9,000
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Continental Specialties -->
+    <section id="continental" class="menu-section">
+     <div class="menu-card">
+      <div class="category-header">
+       <div class="category-icon">
+        🍽️
+       </div>
+       <h2 class="category-title">Continental Specialties</h2>
+      </div>
+      <div class="menu-grid">
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Basmati Rice</h3>
+          <p>Long-grain basmati rice with saffron and cardamom</p>
+         </div>
+         <div class="price-badge">
+          ₦5,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Chicken Curry</h3>
+          <p>Tender chicken in rich, creamy curry sauce with spices</p>
+         </div>
+         <div class="price-badge">
+          ₦3,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Chips</h3>
+          <p>Hand-cut potato chips with rosemary and sea salt</p>
+         </div>
+         <div class="price-badge">
+          ₦3,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Fried Rice</h3>
+          <p>Colorful medley of vegetables and rice, expertly seasoned</p>
+         </div>
+         <div class="price-badge">
+          ₦4,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Stir Fry Pasta</h3>
+          <p>Fusion pasta with Asian flavors and fresh vegetables</p>
+         </div>
+         <div class="price-badge">
+          ₦7,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Club Sandwich</h3>
+          <p>Triple-layer sandwich with premium meats and fresh vegetables</p>
+         </div>
+         <div class="price-badge">
+          ₦9,500
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Fresh Salads -->
+    <section id="salads" class="menu-section">
+     <div class="menu-card">
+      <div class="category-header">
+       <div class="category-icon">
+        🥗
+       </div>
+       <h2 class="category-title">Garden Fresh Salads</h2>
+      </div>
+      <div class="menu-grid">
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Grilled Chicken Salad</h3>
+          <p>Tender grilled chicken breast over mixed greens with vinaigrette</p>
+         </div>
+         <div class="price-badge">
+          ₦3,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Classic Caesar Salad</h3>
+          <p>Crisp romaine lettuce with parmesan, croutons, and Caesar dressing</p>
+         </div>
+         <div class="price-badge">
+          ₦2,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Garden Vegetable Salad</h3>
+          <p>Fresh seasonal vegetables with house-made dressing</p>
+         </div>
+         <div class="price-badge">
+          ₦1,000
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Pastries & Snacks -->
+    <section id="pastries" class="menu-section">
+     <div class="menu-card">
+      <div class="category-header">
+       <div class="category-icon">
+        🧁
+       </div>
+       <h2 class="category-title">Artisan Pastries</h2>
+      </div>
+      <div class="menu-grid">
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Chicken Pie</h3>
+          <p>Tender chicken in buttery, golden pastry crust</p>
+         </div>
+         <div class="price-badge">
+          ₦1,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Chin Chin</h3>
+          <p>Crispy Nigerian snack, perfectly spiced and golden</p>
+         </div>
+         <div class="price-badge">
+          ₦1,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Cup Cake</h3>
+          <p>Moist vanilla cupcake with premium buttercream frosting</p>
+         </div>
+         <div class="price-badge">
+          ₦700
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Doughnut</h3>
+          <p>Fresh-made doughnut with signature glaze</p>
+         </div>
+         <div class="price-badge">
+          ₦700
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Egg Roll</h3>
+          <p>Crispy egg roll with savory filling</p>
+         </div>
+         <div class="price-badge">
+          ₦1,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Fiesta</h3>
+          <p>Colorful party snack with festive flavors</p>
+         </div>
+         <div class="price-badge">
+          ₦1,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Hotdog</h3>
+          <p>Classic hotdog with premium sausage</p>
+         </div>
+         <div class="price-badge">
+          ₦1,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Meatpie</h3>
+          <p>Flaky pastry filled with seasoned premium meat</p>
+         </div>
+         <div class="price-badge">
+          ₦1,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Popcorn</h3>
+          <p>Freshly popped corn with premium seasonings</p>
+         </div>
+         <div class="price-badge">
+          ₦1,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Extra Salad</h3>
+          <p>Additional fresh salad portion</p>
+         </div>
+         <div class="price-badge">
+          ₦1,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Extra Soup</h3>
+          <p>Additional soup portion</p>
+         </div>
+         <div class="price-badge">
+          ₦2,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Take Away Plate</h3>
+          <p>Disposable plate for takeaway orders</p>
+         </div>
+         <div class="price-badge">
+          ₦300
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Premium Beverages -->
+    <section id="non-alcoholic" class="menu-section">
+     <div class="menu-card">
+      <div class="category-header">
+       <div class="category-icon">
+        🥤
+       </div>
+       <h2 class="category-title">Premium Beverages</h2>
+      </div>
+      <div class="menu-grid">
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Premium Water (75cl)</h3>
+          <p>Pure spring water, large bottle</p>
+         </div>
+         <div class="price-badge">
+          ₦1,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Premium Water (50cl)</h3>
+          <p>Pure spring water, regular bottle</p>
+         </div>
+         <div class="price-badge">
+          ₦600
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Coca Cola (Plastic)</h3>
+          <p>Classic Coke in plastic bottle</p>
+         </div>
+         <div class="price-badge">
+          ₦900
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Coca Cola (Glass)</h3>
+          <p>Classic Coke in glass bottle</p>
+         </div>
+         <div class="price-badge">
+          ₦600
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Fanta Orange</h3>
+          <p>Refreshing orange soda</p>
+         </div>
+         <div class="price-badge">
+          ₦900
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Sprite Lemon-Lime</h3>
+          <p>Crisp lemon-lime soda</p>
+         </div>
+         <div class="price-badge">
+          ₦900
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Malt (Can)</h3>
+          <p>Premium malt drink in can</p>
+         </div>
+         <div class="price-badge">
+          ₦1,200
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Malt (Bottle)</h3>
+          <p>Premium malt drink in bottle</p>
+         </div>
+         <div class="price-badge">
+          ₦1,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Chivita</h3>
+          <p>Premium fruit juice blend</p>
+         </div>
+         <div class="price-badge">
+          ₦3,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Chi-Badie</h3>
+          <p>Refreshing fruit drink</p>
+         </div>
+         <div class="price-badge">
+          ₦3,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>5-Alive</h3>
+          <p>Five fruit juice blend</p>
+         </div>
+         <div class="price-badge">
+          ₦2,200
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Hollandia</h3>
+          <p>Premium dairy milk drink</p>
+         </div>
+         <div class="price-badge">
+          ₦3,200
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Vita Milk</h3>
+          <p>Nutritious vitamin-enriched milk</p>
+         </div>
+         <div class="price-badge">
+          ₦2,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Fayrouz</h3>
+          <p>Sparkling apple drink</p>
+         </div>
+         <div class="price-badge">
+          ₦800
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Energy Drinks -->
+    <section id="energy-drinks" class="menu-section">
+     <div class="menu-card">
+      <div class="category-header">
+       <div class="category-icon">
+        ⚡
+       </div>
+       <h2 class="category-title">Energy Boost</h2>
+      </div>
+      <div class="menu-grid">
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Predator Energy</h3>
+          <p>High-performance energy drink for maximum boost</p>
+         </div>
+         <div class="price-badge">
+          ₦1,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Monster Energy</h3>
+          <p>Premium energy drink with intense flavor</p>
+         </div>
+         <div class="price-badge">
+          ₦2,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Block Bullet</h3>
+          <p>Maximum energy boost for peak performance</p>
+         </div>
+         <div class="price-badge">
+          ₦3,000
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Premium Beers -->
+    <section id="beers" class="menu-section">
+     <div class="menu-card">
+      <div class="category-header">
+       <div class="category-icon">
+        🍺
+       </div>
+       <h2 class="category-title">Premium Beers &amp; Lagers</h2>
+      </div>
+      <div class="menu-grid">
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Desperados</h3>
+          <p>Tequila-flavored beer with lime</p>
+         </div>
+         <div class="price-badge">
+          ₦2,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Big Stout</h3>
+          <p>Rich dark stout with bold flavor</p>
+         </div>
+         <div class="price-badge">
+          ₦3,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Star Radler</h3>
+          <p>Refreshing beer with natural citrus</p>
+         </div>
+         <div class="price-badge">
+          ₦2,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Medium Stout</h3>
+          <p>Smooth medium-bodied stout</p>
+         </div>
+         <div class="price-badge">
+          ₦2,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Flying Fish</h3>
+          <p>Light and refreshing lager</p>
+         </div>
+         <div class="price-badge">
+          ₦1,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Trophy Stout</h3>
+          <p>Award-winning dark stout beer</p>
+         </div>
+         <div class="price-badge">
+          ₦2,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Smirnoff Ice</h3>
+          <p>Premium vodka-based refresher</p>
+         </div>
+         <div class="price-badge">
+          ₦1,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Big Williams</h3>
+          <p>Premium lager with smooth finish</p>
+         </div>
+         <div class="price-badge">
+          ₦2,200
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Legend</h3>
+          <p>Classic Nigerian lager</p>
+         </div>
+         <div class="price-badge">
+          ₦2,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Small Williams</h3>
+          <p>Premium lager, small bottle</p>
+         </div>
+         <div class="price-badge">
+          ₦1,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Small Legend</h3>
+          <p>Classic Nigerian lager, small bottle</p>
+         </div>
+         <div class="price-badge">
+          ₦3,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Heineken</h3>
+          <p>International premium lager</p>
+         </div>
+         <div class="price-badge">
+          ₦2,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>33° Beer</h3>
+          <p>Premium export lager</p>
+         </div>
+         <div class="price-badge">
+          ₦1,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Hero</h3>
+          <p>Bold and refreshing lager</p>
+         </div>
+         <div class="price-badge">
+          ₦1,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Goldberg</h3>
+          <p>Classic Nigerian lager</p>
+         </div>
+         <div class="price-badge">
+          ₦1,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Tiger</h3>
+          <p>Crisp and refreshing beer</p>
+         </div>
+         <div class="price-badge">
+          ₦1,200
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Premium Wines -->
+    <section id="wines" class="menu-section">
+     <div class="menu-card">
+      <div class="category-header">
+       <div class="category-icon">
+        🍷
+       </div>
+       <h2 class="category-title">Curated Wine Selection</h2>
+      </div>
+      <div class="menu-grid">
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Blanc</h3>
+          <p>Crisp white wine with fresh notes</p>
+         </div>
+         <div class="price-badge">
+          ₦13,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Carlo Rossi</h3>
+          <p>Traditional Italian wine with rich flavor</p>
+         </div>
+         <div class="price-badge">
+          ₦21,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Chateau du Pape</h3>
+          <p>French premium selection with elegant finish</p>
+         </div>
+         <div class="price-badge">
+          ₦20,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Trebliriano</h3>
+          <p>Italian white wine with delicate flavor</p>
+         </div>
+         <div class="price-badge">
+          ₦10,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Dou Alvaro Btl</h3>
+          <p>Premium vintage bottle with complex notes</p>
+         </div>
+         <div class="price-badge">
+          ₦32,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Gia Cobazi</h3>
+          <p>Italian wine with smooth finish</p>
+         </div>
+         <div class="price-badge">
+          ₦10,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Lambrusco</h3>
+          <p>Sparkling Italian red wine</p>
+         </div>
+         <div class="price-badge">
+          ₦7,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>De Clan</h3>
+          <p>Premium wine selection</p>
+         </div>
+         <div class="price-badge">
+          ₦15,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Toma</h3>
+          <p>Rich red wine with bold character</p>
+         </div>
+         <div class="price-badge">
+          ₦21,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Vino Spemaute</h3>
+          <p>Italian sparkling wine</p>
+         </div>
+         <div class="price-badge">
+          ₦10,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Agor (Asconi)</h3>
+          <p>Premium European wine selection</p>
+         </div>
+         <div class="price-badge">
+          ₦18,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Don Paloma</h3>
+          <p>Spanish wine with rich heritage</p>
+         </div>
+         <div class="price-badge">
+          ₦12,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Donelli</h3>
+          <p>Italian wine with traditional taste</p>
+         </div>
+         <div class="price-badge">
+          ₦13,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Donava</h3>
+          <p>Premium wine with elegant profile</p>
+         </div>
+         <div class="price-badge">
+          ₦15,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Drosty</h3>
+          <p>South African wine selection</p>
+         </div>
+         <div class="price-badge">
+          ₦12,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Four Cousins (Red, White)</h3>
+          <p>Available in Red &amp; White varieties</p>
+         </div>
+         <div class="price-badge">
+          ₦21,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Giacobazzi</h3>
+          <p>Italian wine with authentic flavor</p>
+         </div>
+         <div class="price-badge">
+          ₦13,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Guan Desert</h3>
+          <p>Unique desert wine selection</p>
+         </div>
+         <div class="price-badge">
+          ₦13,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>La dal Moton</h3>
+          <p>French wine with distinctive character</p>
+         </div>
+         <div class="price-badge">
+          ₦6,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Lambrosco</h3>
+          <p>Sparkling Italian wine</p>
+         </div>
+         <div class="price-badge">
+          ₦12,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Roxela</h3>
+          <p>Premium wine with smooth finish</p>
+         </div>
+         <div class="price-badge">
+          ₦12,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Vin Salsero</h3>
+          <p>Spanish wine with vibrant taste</p>
+         </div>
+         <div class="price-badge">
+          ₦8,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Moet Chandon Fruit</h3>
+          <p>Premium champagne for special celebrations</p>
+         </div>
+         <div class="price-badge">
+          ₦165,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Moet Chandon Rose</h3>
+          <p>Elegant rosé champagne</p>
+         </div>
+         <div class="price-badge">
+          ₦120,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Veuve</h3>
+          <p>Premium champagne selection</p>
+         </div>
+         <div class="price-badge">
+          ₦132,000
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Premium Spirits -->
+    <section id="spirits" class="menu-section">
+     <div class="menu-card">
+      <div class="category-header">
+       <div class="category-icon">
+        🥃
+       </div>
+       <h2 class="category-title">Spirits &amp; Bitters</h2>
+      </div>
+      <div class="menu-grid">
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Best Whisky Big</h3>
+          <p>Premium whisky, large bottle</p>
+         </div>
+         <div class="price-badge">
+          ₦15,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Best Whisky Small</h3>
+          <p>Premium whisky, small bottle</p>
+         </div>
+         <div class="price-badge">
+          ₦5,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Black Label</h3>
+          <p>Premium Scotch whisky</p>
+         </div>
+         <div class="price-badge">
+          ₦45,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Camino Tequila</h3>
+          <p>Premium tequila with smooth finish</p>
+         </div>
+         <div class="price-badge">
+          ₦35,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Gold Label</h3>
+          <p>Ultra-premium Scotch whisky</p>
+         </div>
+         <div class="price-badge">
+          ₦55,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Jack Davids</h3>
+          <p>American whiskey with bold character</p>
+         </div>
+         <div class="price-badge">
+          ₦45,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Red Label</h3>
+          <p>Classic Scotch whisky</p>
+         </div>
+         <div class="price-badge">
+          ₦25,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Black Bullet</h3>
+          <p>Premium spirit with intense flavor</p>
+         </div>
+         <div class="price-badge">
+          ₦3,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Gordon Big</h3>
+          <p>Premium gin, large bottle</p>
+         </div>
+         <div class="price-badge">
+          ₦20,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Smirnoff Vodka Big Bottle</h3>
+          <p>Premium vodka, large bottle</p>
+         </div>
+         <div class="price-badge">
+          ₦15,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Smirnoff Vodka Medium Bottle</h3>
+          <p>Premium vodka, medium bottle</p>
+         </div>
+         <div class="price-badge">
+          ₦8,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Bailey's Big</h3>
+          <p>Premium cream liqueur, large bottle</p>
+         </div>
+         <div class="price-badge">
+          ₦55,500
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Best Cream Big</h3>
+          <p>Premium cream liqueur, large bottle</p>
+         </div>
+         <div class="price-badge">
+          ₦15,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Best Cream Small</h3>
+          <p>Premium cream liqueur, small bottle</p>
+         </div>
+         <div class="price-badge">
+          ₦5,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Martel XO</h3>
+          <p>Ultra-premium cognac with exceptional aging</p>
+         </div>
+         <div class="price-badge">
+          ₦187,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Martin Bitters</h3>
+          <p>Premium herbal bitters</p>
+         </div>
+         <div class="price-badge">
+          ₦25,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Martini Rosso</h3>
+          <p>Classic Italian vermouth</p>
+         </div>
+         <div class="price-badge">
+          ₦32,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Bacardi</h3>
+          <p>Premium white rum</p>
+         </div>
+         <div class="price-badge">
+          ₦35,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Double Black</h3>
+          <p>Premium whisky with rich flavor</p>
+         </div>
+         <div class="price-badge">
+          ₦2,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Origin Bitters</h3>
+          <p>Traditional herbal bitters</p>
+         </div>
+         <div class="price-badge">
+          ₦2,500
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Signature Cocktails -->
+    <section id="cocktails" class="menu-section">
+     <div class="menu-card">
+      <div class="category-header">
+       <div class="category-icon">
+        🍹
+       </div>
+       <h2 class="category-title">Signature Cocktails</h2>
+      </div>
+      <div class="menu-grid">
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>After Glow</h3>
+          <p>Smooth cocktail with warm finish</p>
+         </div>
+         <div class="price-badge">
+          Price on Request
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Alcohol Chapman</h3>
+          <p>Nigerian favorite with premium spirits</p>
+         </div>
+         <div class="price-badge">
+          ₦4,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Chapman</h3>
+          <p>Local favorite cocktail with premium ingredients</p>
+         </div>
+         <div class="price-badge">
+          ₦3,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Frozen Margarita</h3>
+          <p>Classic tequila cocktail, perfectly frozen</p>
+         </div>
+         <div class="price-badge">
+          ₦4,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Mojito</h3>
+          <p>Refreshing rum cocktail with fresh mint and lime</p>
+         </div>
+         <div class="price-badge">
+          ₦4,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Orgasm</h3>
+          <p>Creamy layered cocktail with rich flavors</p>
+         </div>
+         <div class="price-badge">
+          ₦4,000
+         </div>
+        </div>
+       </div>
+       <div class="menu-item">
+        <div class="item-content">
+         <div class="item-info">
+          <h3>Sex on the Beach</h3>
+          <p>Tropical paradise in a glass with premium spirits</p>
+         </div>
+         <div class="price-badge">
+          ₦4,500
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+   </main><!-- Premium Footer -->
+   <footer class="premium-footer">
+    <div class="footer-content">
+     <p class="footer-message">Thank you for choosing Precious Palm Royal Hotel - Where luxury meets culinary excellence</p>
+     <div class="footer-features">
+      <div class="footer-feature"><span>🌟</span> <span>Premium Service</span>
+      </div>
+      <div class="footer-feature"><span>🍽️</span> <span>Exceptional Dining</span>
+      </div>
+      <div class="footer-feature"><span>❤️</span> <span>Made with Love</span>
+      </div>
+     </div>
+    </div>
+   </footer>
+  </div><!-- Floating Navigation -->
+  <div class="floating-nav">
+   <div class="nav-dot active" data-section="appetizers"></div>
+   <div class="nav-dot" data-section="breakfast"></div>
+   <div class="nav-dot" data-section="mains"></div>
+   <div class="nav-dot" data-section="proteins"></div>
+   <div class="nav-dot" data-section="soups"></div>
+   <div class="nav-dot" data-section="continental"></div>
+   <div class="nav-dot" data-section="salads"></div>
+   <div class="nav-dot" data-section="pastries"></div>
+   <div class="nav-dot" data-section="non-alcoholic"></div>
+   <div class="nav-dot" data-section="energy-drinks"></div>
+   <div class="nav-dot" data-section="beers"></div>
+   <div class="nav-dot" data-section="wines"></div>
+   <div class="nav-dot" data-section="spirits"></div>
+   <div class="nav-dot" data-section="cocktails"></div>
+  </div><!-- Floating Action Buttons --> <a href="tel:+2347042484011" class="floating-actions call-button"> <span style="font-size: 20px;">📞</span> <span>Call To Order</span> </a>
+  <div class="floating-actions scroll-top" id="scrollTopBtn"><span style="font-size: 24px;">↑</span>
+  </div>
+  <script>
+        const defaultConfig = {
+            restaurant_name: "Precious Palm Royal Hotel",
+            tagline: "Restaurant & Papaya Kernel Bar",
+            welcome_message: "Experience culinary excellence with our carefully curated selection of traditional Nigerian cuisine, continental dishes, and premium beverages"
+        };
+
+        async function render(config) {
+            const restaurantName = config.restaurant_name || defaultConfig.restaurant_name;
+            const tagline = config.tagline || defaultConfig.tagline;
+            const welcomeMessage = config.welcome_message || defaultConfig.welcome_message;
+
+            document.getElementById('restaurant-name').textContent = restaurantName;
+            document.getElementById('tagline').textContent = tagline;
+            document.getElementById('welcome-message').textContent = welcomeMessage;
+        }
+
+        function mapToCapabilities(config) {
+            return {
+                recolorables: [],
+                borderables: [],
+                fontEditable: undefined,
+                fontSizeable: undefined
+            };
+        }
+
+        function mapToEditPanelValues(config) {
+            return new Map([
+                ["restaurant_name", config.restaurant_name || defaultConfig.restaurant_name],
+                ["tagline", config.tagline || defaultConfig.tagline],
+                ["welcome_message", config.welcome_message || defaultConfig.welcome_message]
+            ]);
+        }
+
+        // Preloader Management - Fixed to 1.5 seconds
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            
+            setTimeout(() => {
+                preloader.classList.add('hidden');
+                setTimeout(() => {
+                    preloader.remove();
+                }, 800);
+            }, 1500);
+        });
+
+        // Smooth Navigation
+        document.querySelectorAll('.nav-dot').forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                const sections = document.querySelectorAll('.menu-section');
+                if (sections[index]) {
+                    sections[index].scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active Navigation & Scroll Button
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.menu-section');
+            const navDots = document.querySelectorAll('.nav-dot');
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            
+            // Show/hide scroll button
+            if (window.pageYOffset > 500) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+            
+            // Update active navigation
+            let current = '';
+            sections.forEach((section, index) => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop) {
+                    current = index;
+                }
+            });
+
+            navDots.forEach((dot, index) => {
+                dot.classList.remove('active');
+                if (index === current) {
+                    dot.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll to top
+        document.getElementById('scrollTopBtn').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Initialize Element SDK
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                render,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99345cc5327a1fd5',t:'MTc2MTI1NTMwNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+
+    <!-- Vite / React entry -->
+ </body>
+</html>
