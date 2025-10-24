@@ -151,7 +151,7 @@ const menu = [
       { name: 'Malt (Can)', desc: 'Premium malt drink in can', price: '₦1,200' },
       { name: 'Malt (Bottle)', desc: 'Premium malt drink in bottle', price: '₦1,000' },
       { name: 'Chivita', desc: 'Premium fruit juice blend', price: '₦3,000' },
-      { name: 'Chi-Badie', desc: 'Refreshing fruit drink', price: '₦3,000' },
+      { name: 'Chi-Exotic', desc: 'Refreshing fruit drink', price: '₦3,000' },
       { name: '5-Alive', desc: 'Five fruit juice blend', price: '₦2,200' },
       { name: 'Hollandia', desc: 'Premium dairy milk drink', price: '₦3,200' },
       { name: 'Vita Milk', desc: 'Nutritious vitamin-enriched milk', price: '₦2,500' },
